@@ -28,6 +28,7 @@ def generate_thumbnails(base_path, test_image_path, thumbnails_base_path):
                     '-y',  # Overwrite output files without asking
                     '-i', test_image_path,  # Input file (the test image)
                     '-vf', f"lut3d={lut_path}",  # Apply the 3D LUT filter
+                    '-s', "500x500", # Apply a 500x500 scale
                     thumbnail_path  # Output file
                 ]
                 
